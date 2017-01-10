@@ -1,40 +1,30 @@
+safe: false
 
-exclude:
-  - "/vendor/"
-  - "Gemfile"
-  - "Gemfile.lock"
-  - "README.md"
-  - "LICENSE.md"
-  - "*.gemspec"
-
-keep_files:
-  - "CNAME"
-  - ".git"
-  - ".gitignore"
-
-
-# Site settings
-title: Airspace
-subtitle: "A free HTML5 agency template"
-# Base URL of site. It should always start with a slash,
-# and never end with a slash. Set it to a blank value if hosting at the
-# root of your server.
-# baseurl: "/" # the subpath of your site
-url: "http://luminousrubyist.github.io" # the base hostname & protocol for your site
-baseurl: "/airspace-jekyll"
-cover: "/assets/cover.png"
-logo: "/assets/logo.png"
-
-# Build settings
+# build settings
 markdown: kramdown
+highlighter: rouge
+lsi: false
+permalink: /:title
 
-# Google analytics
-# ga_tracking_id: "UA-XXXX-1"
+title: "Your Name"
+description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
+baseurl: ""
+url: "http://himsel.me" # replace by your site's url
+twitter_username: your-name
+github_username:  lukas-h # (your name)
+accent: "#f7f7e6" # accent color for blog column
 
-# Category descriptions (for archive pages)
-descriptions:
-  - cat: jekyll
-    desc: "Posts describing Jekyll setup techniques."
+author: "Your Name"
+address: "Your Street, <br>Your City, Country"
+email: "your@email.com"
 
-  - cat: dummy
-    desc: "Just some placeholder posts, lorem ipsum and the rest."
+# google analytics tracking code, please change the value
+g_analytics: ""
+
+# language settings
+isolang: en
+
+# exclude files
+exclude:
+  - LICENSE
+  - README.md
