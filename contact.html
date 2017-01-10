@@ -1,127 +1,178 @@
-<!DOCTYPE HTML>
-<!--
-	Twenty by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Contact - Twenty by HTML5 UP</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>
-		<script src="js/jquery.scrolly.min.js"></script>
-		<script src="js/jquery.scrollgress.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-wide.css" />
-			<link rel="stylesheet" href="css/style-noscript.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
-	</head>
-	<body class="contact">
-	
-		<!-- Header -->
-			<header id="header">
-				<h1 id="logo"><a href="index.html">Twenty <span>by HTML5 UP</span></a></h1>
-				<nav id="nav">
-					<ul>
-						<li class="current"><a href="index.html">Welcome</a></li>
-						<li class="submenu">
-							<a href="">Layouts</a>
-							<ul>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
-								<li><a href="contact.html">Contact</a></li>
-								<li class="submenu">
-									<a href="">Submenu</a>
-									<ul>
-										<li><a href="#">Dolore Sed</a></li>
-										<li><a href="#">Consequat</a></li>
-										<li><a href="#">Lorem Magna</a></li>
-										<li><a href="#">Sed Magna</a></li>
-										<li><a href="#">Ipsum Nisl</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a href="#" class="button special">Sign Up</a></li>
-					</ul>
-				</nav>
-			</header>
-		
-		<!-- Main -->
-			<article id="main">
+---
+title: Contact
+heading: Get in touch today
+description: We'd love to help you improve your sales.
 
-				<header class="special container">
-					<span class="icon fa-envelope"></span>
-					<h2>Get In Touch</h2>
-					<p>Use the form below to give /dev/null a piece of your mind.</p>
-				</header>
-					
-				<!-- One -->
-					<section class="wrapper style4 special container small">
-					
-						<!-- Content -->
-							<div class="content">
-								<form>
-									<div class="row half collapse-at-2">
-										<div class="6u">
-											<input type="text" name="name" placeholder="Name" />
-										</div>
-										<div class="6u">
-											<input type="text" name="email" placeholder="Email" />
-										</div>
-									</div>
-									<div class="row half">
-										<div class="12u">
-											<input type="text" name="subject" placeholder="Subject" />
-										</div>
-									</div>
-									<div class="row half">
-										<div class="12u">
-											<textarea name="message" placeholder="Message" rows="7"></textarea>
-										</div>
-									</div>
-									<div class="row">
-										<div class="12u">
-											<ul class="buttons">
-												<li><input type="submit" class="special" value="Send Message" /></li>
-											</ul>
-										</div>
-									</div>
-								</form>
-							</div>
-							
-					</section>
-				
-			</article>
+map:
+  latitude: -45.8787605
+  longitude: 170.5027976
+  address: "1 George Street, Dunedin, New Zealand"
+  zoom: 13
+---
+<div class="map" id="map"></div>
 
-		<!-- Footer -->
-			<footer id="footer">
-			
-				<ul class="icons">
-					<li><a href="#" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li>
-					<li><a href="#" class="icon circle fa-github"><span class="label">Github</span></a></li>
-					<li><a href="#" class="icon circle fa-dribbble"><span class="label">Dribbble</span></a></li>
-				</ul>
-				
-				<ul class="copyright">
-					<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			
-			</footer>
 
-	</body>
-</html>
+<div class="contact-box">
+	<form action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form">
+		<input type="hidden" name="_to" value="support@example.com" />
+		<input type="text" name="_gotcha" style="display: none;">
+
+		<label for="name">Full Name</label>
+		<input type="text" name="name" id="name" placeholder="Enter your name..." />
+
+		<label for="email">Email Address</label>
+		<input type="email" name="email" id="email" placeholder="Enter your email..." required />
+
+		<label for="message">Message</label>
+		<textarea name="message" id="message" placeholder="Enter your message..."></textarea>
+
+		<input type="submit" value="Send Message" />
+	</form>
+
+	<div class="contact-details">
+		<h3 class="editable">Address</h3>
+		<address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", <br>" }}</a></address>
+
+		<h3 class="editable">Email</h3>
+		<p><a href="mailto:support@example.com">support@example.com</a></p>
+	</div>
+</div>
+
+<script type="text/javascript">
+	window.mapData = {{ page.map | jsonify }};
+
+	function initMap() {
+		var myOptions = {
+			scrollwheel: false,
+			draggable: false,
+			panControl: false,
+			disableDefaultUI: true,
+			styles: [{
+				"featureType": "all",
+				"elementType": "labels.text.fill",
+				"stylers": [{
+					"saturation": 36
+				}, {
+					"color": "#000000"
+				}, {
+					"lightness": 40
+				}]
+			}, {
+				"featureType": "all",
+				"elementType": "labels.text.stroke",
+				"stylers": [{
+					"visibility": "on"
+				}, {
+					"color": "#000000"
+				}, {
+					"lightness": 16
+				}]
+			}, {
+				"featureType": "all",
+				"elementType": "labels.icon",
+				"stylers": [{
+					"visibility": "off"
+				}]
+			}, {
+				"featureType": "administrative",
+				"elementType": "geometry.fill",
+				"stylers": [{
+					"color": "#000000"
+				}, {
+					"lightness": 20
+				}]
+			}, {
+				"featureType": "administrative",
+				"elementType": "geometry.stroke",
+				"stylers": [{
+					"color": "#000000"
+				}, {
+					"lightness": 17
+				}, {
+					"weight": 1.2
+				}]
+			}, {
+				"featureType": "landscape",
+				"elementType": "geometry",
+				"stylers": [{
+					"color": "#000000"
+				}, {
+					"lightness": 20
+				}]
+			}, {
+				"featureType": "poi",
+				"elementType": "geometry",
+				"stylers": [{
+					"color": "#000000"
+				}, {
+					"lightness": 21
+				}]
+			}, {
+				"featureType": "road.highway",
+				"elementType": "geometry.fill",
+				"stylers": [{
+					"color": "#000000"
+				}, {
+					"lightness": 17
+				}]
+			}, {
+				"featureType": "road.highway",
+				"elementType": "geometry.stroke",
+				"stylers": [{
+					"color": "#000000"
+				}, {
+					"lightness": 29
+				}, {
+					"weight": 0.2
+				}]
+			}, {
+				"featureType": "road.arterial",
+				"elementType": "geometry",
+				"stylers": [{
+					"color": "#000000"
+				}, {
+					"lightness": 18
+				}]
+			}, {
+				"featureType": "road.local",
+				"elementType": "geometry",
+				"stylers": [{
+					"color": "#000000"
+				}, {
+					"lightness": 16
+				}]
+			}, {
+				"featureType": "transit",
+				"elementType": "geometry",
+				"stylers": [{
+					"color": "#000000"
+				}, {
+					"lightness": 19
+				}]
+			}, {
+				"featureType": "water",
+				"elementType": "geometry",
+				"stylers": [{
+					"color": "#000000"
+				}, {
+					"lightness": 17
+				}]
+			}],
+			zoom: window.mapData.zoom,
+			maxZoom: window.mapData.zoom,
+			minZoom: window.mapData.zoom,
+			center: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude),
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		map = new google.maps.Map(document.getElementById("map"), myOptions);
+		marker = new google.maps.Marker({
+			map: map,
+			position: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude)
+		});
+
+		google.maps.event.addDomListener(window, "resize", function () {
+			map.setCenter(myOptions.center);
+		});
+	}
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_javascript_api_key }}&amp;callback=initMap"></script>
