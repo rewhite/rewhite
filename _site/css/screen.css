@@ -88,6 +88,9 @@ p, address {
   .hero .main {
     margin-top: 30px;
     vertical-align: bottom; }
+  .hero .logo {
+    width: 40%;
+    height: 100%; }
 
 @media (min-width: 768px) {
   .flex {
