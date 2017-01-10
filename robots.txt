@@ -1,3 +1,6 @@
+---
+layout: null
+sitemap: false
+---
 User-agent: *
-Disallow:
-Sitemap: http://himsel.me/sitemap.xml
+Sitemap: {{ site.url }}/sitemap.xml

@@ -1,30 +1,95 @@
-safe: false
+# ----
+# Site
 
-# build settings
-markdown: kramdown
-highlighter: rouge
-lsi: false
-permalink: /:title
+title: Hydra Template
+url: "https://proud-alligator.cloudvent.net"
+baseurl:
+google_analytics_key:
+google_maps_javascript_api_key:
 
-title: "Your Name"
-description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
-baseurl: ""
-url: "http://himsel.me" # replace by your site's url
-twitter_username: your-name
-github_username:  lukas-h # (your name)
-accent: "#f7f7e6" # accent color for blog column
+# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
+logo: /siteicon.png
+description: Product marketing template for Jekyll.
+author:
+  name:
+  email:
+  twitter: # twitter username without the @ symbol
+social:
+  name: Hydra Template
+  links:
+    - https://github.com/CloudCannon/hydra-jekyll-template
 
-author: "Your Name"
-address: "Your Street, <br>Your City, Country"
-email: "your@email.com"
+# -----
+# Build
 
-# google analytics tracking code, please change the value
-g_analytics: ""
+collections:
+  staff_members:
+    _hide_content: true
 
-# language settings
-isolang: en
+paginate: 10
+paginate_path: "/blog/:num/"
+permalink: pretty
 
-# exclude files
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
+  -
+    scope:
+      path: "index.html"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: "contact.html"
+    values:
+      full_width: true
+
+jekyll-archives:
+  enabled:
+    - categories
+
+gems:
+  - jekyll-archives
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-paginate
+
 exclude:
-  - LICENSE
+  - Gemfile
+  - Gemfile.lock
   - README.md
+  - LICENCE
+
+# -----------
+# CloudCannon
+
+social_icons:
+  - Facebook
+  - Google Plus
+  - Instagram
+  - LinkedIn
+  - Pinterest
+  - Tumblr
+  - Twitter
+  - YouTube
+  - RSS
+
+_comments:
+  map: Update the map location and display settings.
+  latitude: Coordinates for the center marker on the map.
+  longitude: Coordinates for the center marker on the map.
+  zoom: The zoom level for the map.
+  pricing_table: Update the information in the pricing tables.
+  highlight: Emphasis the text
+  color: The background colour used in the plan name and call to action.
+  new_window: Open link in new window
