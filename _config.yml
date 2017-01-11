@@ -1,7 +1,7 @@
 # ----
 # Site
 
-title: Hydra Template
+title: Case
 url: "https://proud-alligator.cloudvent.net"
 baseurl:
 google_analytics_key:
@@ -9,13 +9,13 @@ google_maps_javascript_api_key:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
-description: Product marketing template for Jekyll.
+description: 우리의 일상을 담는 아름다운 도구
 author:
   name:
   email:
   twitter: # twitter username without the @ symbol
 social:
-  name: Hydra Template
+  name: 1313131
   links:
     - https://github.com/CloudCannon/hydra-jekyll-template
 
