@@ -4,9 +4,11 @@
 	text-align: center;
 	margin: 0;
 	padding: 100px 0;
-
 	h2 {
-		margin-bottom: 50px;
+		font-size: 1.5em;	
+	}
+	p {
+		color: white;
 	}
 }
 
@@ -46,10 +48,27 @@
 	}
 
 	.logo {
-		width:40%;
-		height:100%;
-		min-width: 200px;
+		width:28%;
 	}
+}
+
+.case-content {
+	#subject {
+		margin-bottom:0px;
+	}
+	h2 {
+		font-size: 2.05em;
+		color: #333;
+	}
+	p {
+		text-align: justify;
+		font-size: 1.15em;
+	}
+}
+
+
+.gray-background-color {
+		background-color:#fafafa;
 }
 
 
@@ -69,4 +88,17 @@
 	.content section:nth-child(even) .flex {
 		flex-direction: row-reverse;
 	}
+}
+
+@media screen and (max-width: 640px) {
+	.hero {
+		.logo {
+			width: 40%
+		}
+	}
+
+	p {
+		font-size: 17px;
+	}
+
 }
