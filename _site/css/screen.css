@@ -130,6 +130,8 @@ p, address {
 
   .hero .logo {
     width: 40%; }
+  .hero .mainImage {
+    width: 100%; }
 
   p {
     font-size: 17px; } }
