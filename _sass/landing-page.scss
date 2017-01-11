@@ -3,9 +3,10 @@
 	color: #fff;
 	text-align: center;
 	margin: 0;
-	padding: 100px 0;
+	padding: 100px 20px;
+	word-break: keep-all;
 	h2 {
-		font-size: 1.5em;	
+		font-size: 1.3em;	
 	}
 	p {
 		color: white;
@@ -45,10 +46,12 @@
 	.mainImage {
 		margin-top: 30px;
 	  	vertical-align: bottom;	
+	  	width: 65%;
 	}
 
 	.logo {
-		width:28%;
+		width:23%;
+		margin-bottom: 15px;
 	}
 }
 
@@ -91,6 +94,12 @@
 }
 
 @media screen and (max-width: 640px) {
+.bottom-cta {
+
+	h2 {
+		font-size: 1em;
+	}
+}
 	.hero {
 		.logo {
 			width: 40%

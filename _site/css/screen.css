@@ -54,9 +54,10 @@ p, address {
   color: #fff;
   text-align: center;
   margin: 0;
-  padding: 100px 0; }
+  padding: 100px 20px;
+  word-break: keep-all; }
   .bottom-cta h2 {
-    font-size: 1.5em; }
+    font-size: 1.3em; }
   .bottom-cta p {
     color: white; }
 
@@ -89,9 +90,11 @@ p, address {
     color: #fff; }
   .hero .mainImage {
     margin-top: 30px;
-    vertical-align: bottom; }
+    vertical-align: bottom;
+    width: 65%; }
   .hero .logo {
-    width: 28%; }
+    width: 23%;
+    margin-bottom: 15px; }
 
 .case-content #subject {
   margin-bottom: 0px; }
@@ -122,6 +125,9 @@ p, address {
   .content section:nth-child(even) .flex {
     flex-direction: row-reverse; } }
 @media screen and (max-width: 640px) {
+  .bottom-cta h2 {
+    font-size: 1em; }
+
   .hero .logo {
     width: 40%; }
 
