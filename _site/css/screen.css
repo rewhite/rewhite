@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 .plans, .staff, .contact-box, footer .footer-columns {
   display: -webkit-box;
   display: -webkit-flex;
